@@ -25,6 +25,15 @@ namespace ConsoleApp1
             Matricula = GenerarMatricula(nombre, edad, apellido);
         }
 
+        public void MostrarInformacion()
+        {
+            Console.WriteLine($"\nNombre: {Nombre}\n" +
+                $"Apellido: {Apellido}\n" +
+                $"Edad: {Edad}\n" +
+                $"Promedio: {Promedio}\n" +
+                $"Matricula: {Matricula}\n");
+        }
+
         public void ActualizarPromedio(double promedio)
         {
             Promedio = promedio;
@@ -73,6 +82,18 @@ namespace ConsoleApp1
             }
 
             return ListaEstudiantes.Sum(x => x.Promedio);
+        }
+
+        public void FiltrarEstudiantes(Func<T, bool> Criterio)
+        {
+            if (!ListaEstudiantes.Any())
+            {
+                throw new InvalidOperationException("No existen estudiantes");
+            }
+            else
+            {
+                ListaEstudiantes.ForEach(x => { if (Criterio(x)) x.MostrarInformacion(); });
+            }
         }
 
 
