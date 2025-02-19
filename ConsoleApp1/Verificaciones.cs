@@ -14,12 +14,16 @@ using System.Text.Json.Serialization;
 namespace ConsoleApp1
 {
 
-    internal static class Validaciones
+    public static class Validaciones
     {
         //Validar que un string sea correcto y no sobrepase el numero de letras deceado.
         public static string ValidarString(string text, int largo)
         {
-            if (string.IsNullOrEmpty(text) && text.)
+            if (string.IsNullOrEmpty(text) && !text.Length <= largo)
+            {
+                return text;
+            }
+
         }
         
 
