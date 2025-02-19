@@ -80,6 +80,10 @@ namespace ConsoleApp1
         }
 =======
             return text;
+<<<<<<< HEAD
+=======
+
+>>>>>>> bd53d96 (Solucion errores)
         }
         
        
