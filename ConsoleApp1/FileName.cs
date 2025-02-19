@@ -10,6 +10,7 @@ namespace ConsoleApp1
     {
         public delegate void EstudianteEventHandler<T>(T estudiante);
 
+        //Metodo que sera invocado al agregar un nuevo estudiante a la lista.
         public static void MetodoAgEstudiante(Estudiante estudiante)
         {
             Console.WriteLine($"\nSe ha agregado un nuevo estudiante:\n" +
@@ -22,7 +23,6 @@ namespace ConsoleApp1
         {
             GrupoEstudiantes<Estudiante> Grupo1 = new GrupoEstudiantes<Estudiante>();
             Grupo1.EventoAgregarEstudiantes += MetodoAgEstudiante;
-
 
 
         }
