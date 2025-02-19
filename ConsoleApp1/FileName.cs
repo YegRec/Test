@@ -24,6 +24,8 @@ namespace ConsoleApp1
 
             grupo1.AgregarEstudiante(estudiante1);
 
+            grupo1.GuardarArchivoJson();
+
 
 
         }
