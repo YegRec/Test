@@ -9,12 +9,16 @@ namespace ConsoleApp1
 {
     internal class program
     {
+
         public delegate void AgregarEstudianteEventHandler<T>(T estudiante);
 
         public static void MetodoAgregar(Estudiante estudiante)
         {
             Console.WriteLine($"Nuevo estudiante agregado: {estudiante.Matricula}");
         }
+
+        public delegate void EstudianteEventHandler<T>(T estudiante);
+
         static void Main(string[] args)
         {
             GrupoEstudiantes<Estudiante> grupo1 = new GrupoEstudiantes<Estudiante>();
