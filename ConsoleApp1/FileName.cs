@@ -20,11 +20,11 @@ namespace ConsoleApp1
             GrupoEstudiantes<Estudiante> grupo1 = new GrupoEstudiantes<Estudiante>();
             grupo1.EventoAgregarEstudiantes += MetodoAgregar;
 
-            Estudiante estudiante1 = new Estudiante("Manuel", "Garcia", 22, 9.8);
+            grupo1.CargarArchivoJson();
 
-            grupo1.AgregarEstudiante(estudiante1);
+            grupo1.FiltrarEstudiantes(x => x.Promedio > 1);
 
-            grupo1.GuardarArchivoJson();
+            Console.ReadKey();
 
 
 
