@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Estudiante.cs" />
+    <Compile Include="Verificaciones.cs" />
     <Compile Include="FileName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
