@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace ConsoleApp1
@@ -9,9 +10,20 @@ namespace ConsoleApp1
     internal class program
     {
         public delegate void AgregarEstudianteEventHandler<T>(T estudiante);
+
+        public static void MetodoAgregar(Estudiante estudiante)
+        {
+            Console.WriteLine($"Nuevo estudiante agregado: {estudiante.Matricula}");
+        }
         static void Main(string[] args)
         {
-            Console.WriteLine($"{DateTime.Now.Day}");
+            GrupoEstudiantes<Estudiante> grupo1 = new GrupoEstudiantes<Estudiante>();
+            grupo1.EventoAgregarEstudiantes += MetodoAgregar;
+
+            Estudiante estudiante1 = new Estudiante("Manuel", "Garcia", 22, 9.8);
+
+            grupo1.AgregarEstudiante(estudiante1);
+
 
 
         }
