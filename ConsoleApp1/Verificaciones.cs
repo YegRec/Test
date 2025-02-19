@@ -19,10 +19,7 @@ namespace ConsoleApp1
         //Validar que un string sea correcto y no sobrepase el numero de letras deceado.
         public static string ValidarString(string text, int largo)
         {
-            if (string.IsNullOrEmpty(text) && !text.Length <= largo)
-            {
-                return text;
-            }
+            return text;
 
         }
         
