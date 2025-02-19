@@ -140,7 +140,6 @@ namespace ConsoleApp1
             };
             string json = JsonSerializer.Serialize(ListaEstudiantes, opciones);
             File.WriteAllText(rutaArchivo, json);
-
             Console.WriteLine("Archivo guardado con exito...");
         }
 
