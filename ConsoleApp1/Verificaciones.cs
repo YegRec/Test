@@ -27,6 +27,7 @@ namespace ConsoleApp1
             {
                 throw new ArgumentException("El texto ingresado es invalido");
             }
+<<<<<<< HEAD
             return text;
         }
 
@@ -39,6 +40,9 @@ namespace ConsoleApp1
                 throw new ArgumentException("El texto ingresado es invalido");
             }
             return text;
+=======
+            
+>>>>>>> d300772 (Solucion errores)
         }
         
         public static int ValidarInt(string numero, int largo)
