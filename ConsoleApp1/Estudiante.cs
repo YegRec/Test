@@ -52,7 +52,7 @@ namespace ConsoleApp1
     {
         public List<T> ListaEstudiantes { get; private set; } = new List<T>();
 
-        public event AgregarEstudianteEventHandler<T> EventoAgregarEstudiantes;
+        public event EstudianteEventHandler<T> EventoAgregarEstudiantes;
 
         public void AgregarEstudiante(T estudiante)
         {

@@ -8,7 +8,7 @@ namespace ConsoleApp1
 {
     internal class program
     {
-        public delegate void AgregarEstudianteEventHandler<T>(T estudiante);
+        public delegate void EstudianteEventHandler<T>(T estudiante);
         static void Main(string[] args)
         {
             Console.WriteLine($"{DateTime.Now.Day}");
