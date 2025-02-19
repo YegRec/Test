@@ -23,7 +23,7 @@ namespace ConsoleApp1
         public double Promedio { get; private set; }
         [JsonInclude]
         public string Matricula { get; private set; }
-
+        
 
         public Estudiante(string nombre, string apellido, int edad, double promedio)
         {
