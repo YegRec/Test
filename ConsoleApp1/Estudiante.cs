@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static ConsoleApp1.program;
 using System.Text.Json.Serialization.Metadata;
+using System.Text.Json.Serialization;
 
 namespace ConsoleApp1
 {
@@ -112,8 +113,30 @@ namespace ConsoleApp1
                 };
                 string json = File.ReadAllText(rutaArchivo);
                 ListaEstudiantes = JsonSerializer.Deserialize<List<T>>(json, opciones);
-                Console.WriteLine("Archivo cargado con exito.");
+                Console.WriteLine("Archivo cargado con exito...");
             }
+            else
+            {
+                Console.WriteLine("Error: no se encontro ningun archivo");
+            }
+        }
+
+        public void GuardarArchivoJson()
+        {
+            string rutaArchivo = Path.Combine(Path.GetTempPath(), "GestionEstudiantes.json");
+
+            var opciones = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+                IncludeFields = true,
+                PropertyNameCaseInsensitive = true,
+                TypeInfoResolver = new DefaultJsonTypeInfoResolver()
+            };
+            string json = JsonSerializer.Serialize(ListaEstudiantes, opciones);
+            File.WriteAllText(rutaArchivo, json);
+
+            Console.WriteLine("Archivo guardado con exito...");
         }
 
 
