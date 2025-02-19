@@ -18,6 +18,7 @@ namespace ConsoleApp1
         //Validar que un string sea correcto y no sobrepase el numero de letras deceado.
         public static string ValidarString(string text, int largo)
         {
+<<<<<<< HEAD
             //En este metodo verificaremos si un string es valido y ademas verificaremos o agregaremos
             //otro requisito que sera un numero para asegurarnos que el texto requerido no sobrepase
             //el largo del numero que asignamos.
@@ -77,6 +78,12 @@ namespace ConsoleApp1
             }
             return double.Parse(numero);
         }
+=======
+            return text;
+        }
+        
+       
+>>>>>>> 7fded63 (Solucion errores)
 
     }
 

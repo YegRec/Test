@@ -75,7 +75,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Estudiante.cs" />
+<<<<<<< HEAD
     <Compile Include="Interfaz.cs" />    
+=======
+>>>>>>> 7fded63 (Solucion errores)
     <Compile Include="Verificaciones.cs" />
     <Compile Include="FileName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
