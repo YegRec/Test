@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text.Json;
 using System.Text;
 using System.Threading.Tasks;
 using static ConsoleApp1.program;
+using System.Text.Json.Serialization.Metadata;
 
 namespace ConsoleApp1
 {
@@ -93,6 +96,23 @@ namespace ConsoleApp1
             else
             {
                 ListaEstudiantes.ForEach(x => { if (Criterio(x)) x.MostrarInformacion(); });
+            }
+        }
+
+        public void CargarArchivoJson()
+        {
+            string rutaArchivo = Path.Combine(Path.GetTempPath(), "GestionEstudiantes.json");
+
+            if (File.Exists(rutaArchivo))
+            {
+                var opciones = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+                    TypeInfoResolver = new DefaultJsonTypeInfoResolver()
+                };
+                string json = File.ReadAllText(rutaArchivo);
+                ListaEstudiantes = JsonSerializer.Deserialize<List<T>>(json, opciones);
+                Console.WriteLine("Archivo cargado con exito.");
             }
         }
 
