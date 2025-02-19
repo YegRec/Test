@@ -13,10 +13,15 @@ namespace ConsoleApp1
 {
     internal class Estudiante
     {
+        [JsonInclude]
         public string Nombre { get; private set; }
+        [JsonInclude]
         public string Apellido { get; private set; }
+        [JsonInclude]
         public int Edad {  get; private set; }
+        [JsonInclude]
         public double Promedio { get; private set; }
+        [JsonInclude]
         public string Matricula { get; private set; }
 
 
