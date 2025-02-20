@@ -106,8 +106,46 @@ namespace ConsoleApp1
 >>>>>>> 87bd0a0 (Validaciones de String agregadas)
         }
         
+<<<<<<< HEAD
        
+<<<<<<< HEAD
 >>>>>>> 7fded63 (Solucion errores)
+=======
+=======
+        public static int ValidarInt(string numero, int largo)
+        {
+            //En este metodo verificaremos que el usuario ingrese un numero entero correctamente
+            //Ademas de una verificacion adicional para que el numero que el usuario ingrese no sea
+            //mayor al valor de largo.
+            //EJ: numero = 10, largo = 12. = true.. ya que 10 es menor a 12.
+            if (string.IsNullOrEmpty(numero) || int.Parse(numero) > largo || (!int.TryParse(numero, out int c)))
+            {
+                throw new ArgumentException("El numero ingresado es invalido o nulo");
+            }
+            return int.Parse(numero);
+        }
+
+        public static int ValidarInt(string numero)
+        {
+            //Este metodo solo verificaremos que el usuario ingrese un numero entero correctamente.
+            if (string.IsNullOrEmpty(numero) || !int.TryParse(numero, out int c))
+            {
+                throw new ArgumentException("El numero ingresado es invalido o nulo");
+            }
+            return int.Parse(numero);
+        }
+
+        public static double ValidarDouble(string numero, double largo)
+        {
+            //Este metodo funciona igual que ValidarInt solo que con un double en vez de un int.
+            if (string.IsNullOrEmpty(numero) || double.Parse(numero) > largo || double.TryParse(numero, out double c))
+            {
+                throw new ArgumentException("El numero ingresado es invalido o nulo");
+            }
+            return double.Parse(numero);
+        }
+>>>>>>> 6b5545c (Validaciones double Agregada)
+>>>>>>> 2a82064 (Validaciones double Agregada)
 
     }
 
