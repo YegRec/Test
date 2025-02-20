@@ -27,8 +27,11 @@ namespace ConsoleApp1
             Console.ReadKey();
 
             
+<<<<<<< HEAD
 
            
+=======
+>>>>>>> validaciones
 
         }
 
