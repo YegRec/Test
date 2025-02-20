@@ -88,10 +88,13 @@ namespace ConsoleApp1
             return text;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> bd53d96 (Solucion errores)
 =======
+=======
+>>>>>>> ea7e920 (Correccion errores)
         }
 
         public static string VaidarString(string text)
@@ -144,8 +147,14 @@ namespace ConsoleApp1
             }
             return double.Parse(numero);
         }
+<<<<<<< HEAD
 >>>>>>> 6b5545c (Validaciones double Agregada)
+<<<<<<< HEAD
 >>>>>>> 2a82064 (Validaciones double Agregada)
+=======
+=======
+>>>>>>> ea7e920 (Correccion errores)
+>>>>>>> a1ede5b (Correccion errores)
 
     }
 
