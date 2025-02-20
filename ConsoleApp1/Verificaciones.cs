@@ -28,11 +28,6 @@ namespace ConsoleApp1
                 throw new ArgumentException("El texto ingresado es invalido");
             }
             return text;
-<<<<<<< HEAD
-        }
-        
-       
-=======
         }
 
         public static string VaidarString(string text)
@@ -78,7 +73,6 @@ namespace ConsoleApp1
             }
             return double.Parse(numero);
         }
->>>>>>> validaciones
 
     }
 
