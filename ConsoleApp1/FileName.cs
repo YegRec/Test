@@ -25,14 +25,6 @@ namespace ConsoleApp1
             grupo1.FiltrarEstudiantes(x => x.Promedio > 1);
 
             Console.ReadKey();
-
-            
-<<<<<<< HEAD
-
-           
-=======
->>>>>>> validaciones
-
         }
 
 
