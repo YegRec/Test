@@ -20,6 +20,8 @@ namespace ConsoleApp1
                 $"Promedio: {estudiante.Promedio}\n" +
                 $"Matricula: {estudiante.Matricula}");
         }
+        public delegate void EstudianteEventHandler<T>(T estudiante);
+
         static void Main(string[] args)
         {
             GrupoEstudiantes<Estudiante> grupo1 = new GrupoEstudiantes<Estudiante>();
