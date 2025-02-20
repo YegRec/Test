@@ -19,6 +19,9 @@ namespace ConsoleApp1
         public static string ValidarString(string text, int largo)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bd3631c (Validaciones de String agregadas)
             //En este metodo verificaremos si un string es valido y ademas verificaremos o agregaremos
             //otro requisito que sera un numero para asegurarnos que el texto requerido no sobrepase
             //el largo del numero que asignamos.
@@ -28,6 +31,7 @@ namespace ConsoleApp1
             {
                 throw new ArgumentException("El texto ingresado es invalido");
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
             return text;
         }
@@ -79,11 +83,27 @@ namespace ConsoleApp1
             return double.Parse(numero);
         }
 =======
+=======
+>>>>>>> bd3631c (Validaciones de String agregadas)
             return text;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> bd53d96 (Solucion errores)
+=======
+        }
+
+        public static string VaidarString(string text)
+        {
+            //En este metodo overload validaremos solo si el string es valido o no esta vacio
+            //no nos importara el tamano del texto o palabra.
+            if (string.IsNullOrEmpty(text))
+            {
+                throw new ArgumentException("El texto ingresado es invalido");
+            }
+            return text;
+>>>>>>> 87bd0a0 (Validaciones de String agregadas)
         }
         
        
