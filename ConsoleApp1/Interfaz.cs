@@ -24,7 +24,7 @@ namespace ConsoleApp1
                 "4.Mostrar todos los estudiantes\n" +
                 "5.Guardar lista de estudiantes.\n" +
                 "6.Cargar lista de estudiantes.\n" +
-                "[Salir]");
+                "7.[Salir]");
         }
 
         public static void MenuAgregarEstudiante(GrupoEstudiantes<Estudiante> grupo)
@@ -55,14 +55,14 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("El estudiante ya esta registrado");
             }
-
+            Validaciones.Esperar();
         }
 
         public static void MenuBuscarEstudiante(GrupoEstudiantes<Estudiante> grupo)
         {
             Console.Clear();
             Console.WriteLine("Ingresa la matricula del estudiante");
-            string matricula = Validaciones.ValidarString(Console.ReadLine(), 12);
+            string matricula = Validaciones.ValidarString(Console.ReadLine(), 14);
 
             Estudiante Resultado = grupo.ListaEstudiantes.Find(x => x.Matricula.ToLower() == matricula.ToLower());
 
@@ -81,7 +81,7 @@ namespace ConsoleApp1
         {
             Console.Clear();
             Console.WriteLine("Ingresa la matricula del estudiante");
-            string matricula = Validaciones.ValidarString(Console.ReadLine(), 12);
+            string matricula = Validaciones.ValidarString(Console.ReadLine(), 14);
 
             Estudiante Resultado = grupo.ListaEstudiantes.Find(x => x.Matricula.ToLower() == matricula.ToLower());
 
