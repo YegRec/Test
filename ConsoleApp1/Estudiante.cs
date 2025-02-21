@@ -69,18 +69,9 @@ namespace ConsoleApp1
             ListaEstudiantes.Add(estudiante);
         }
 
-        public void EliminarEstudiante(string matricula)
+        public void EliminarEstudiante(T estudiante)
         {
-            T estudiante = ListaEstudiantes.FirstOrDefault(x => x.Matricula == matricula);
-
-            if (estudiante != null)
-            {
-                ListaEstudiantes.Remove(estudiante);
-            }
-            else
-            {
-                throw new InvalidOperationException($"El estudiante {matricula} no existe");
-            }
+            ListaEstudiantes.Remove(estudiante);
         }
 
         public double ObtenerPromedioGeneral()
