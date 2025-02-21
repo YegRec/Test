@@ -74,6 +74,12 @@ namespace ConsoleApp1
             return double.Parse(numero);
         }
 
+        public static void Esperar()
+        {
+            Console.WriteLine("\nPresiona cualquier tecla para continuar");
+            Console.ReadKey();
+        }
+
 
     }
 
