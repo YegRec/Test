@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 using System.Text.Json.Serialization.Metadata;
 using System.Text.Json.Serialization;
 
-//Esta clase se encarga de validar todos los datos
-//solicitados al usuario y verificar que sean correctos
+//Clase interfaz maneja todo lo relacionado con interfaz de usuario
+//Y requerimientos o muestra de datos
 namespace ConsoleApp1
 {
 
@@ -96,10 +96,20 @@ namespace ConsoleApp1
                 switch (Validaciones.ValidarInt(Console.ReadLine(), 2))
                 {
                     case 1:
+                        grupo.EliminarEstudiante(Resultado);
+                        Console.WriteLine("Estudiante eliminado.");
+                        break;
+                    case 2:
+                        Console.WriteLine("Cancelando operacion...");
+                        break;
+                    default:
+                        Console.WriteLine("Seleccion incorrecta");
                         break;
                 }
             }
         }
+
+       //fin 
     }
 
 
