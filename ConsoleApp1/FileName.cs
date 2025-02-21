@@ -26,11 +26,60 @@ namespace ConsoleApp1
             grupo1.EventoAgregarEstudiantes += MetodoAgEstudiante;
 
 
-            grupo1.CargarArchivoJson();
+            while (true)
+            {
+                Console.Clear();
+                Interfaz.MainMenu();
 
-            grupo1.FiltrarEstudiantes(x => x.Promedio > 1);
+                try
+                {
+                    int seleccion = Validaciones.ValidarInt(Console.ReadLine(), 7);
+                    switch(seleccion)
+                    {
+                        case 1:
+                            Interfaz.MenuAgregarEstudiante(grupo1);
+                            break;
+                        case 2:
+                            Interfaz.MenuBuscarEstudiante(grupo1);
+                            break;
+                        case 3:
+                            Interfaz.MenuEliminarEstudiante(grupo1);
+                            break;
+                        case 4:
+                            Interfaz.MostrarEstudiantes(grupo1);
+                            break;
+                        case 5:
+                            Interfaz.Guardar(grupo1);
+                            break;
+                        case 6:
+                            Interfaz.Cargar(grupo1);
+                            break;
+                        case 7:
+                            break;
+                    }
 
-            Console.ReadKey();
+                    Validaciones.Esperar();
+                    if (seleccion == 7)
+                    {
+                        break;
+                    }
+
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine($"{ex.Message}");
+                }
+                catch (InvalidOperationException ez)
+                {
+                    Console.WriteLine($"{ez.Message}");
+                }
+                catch (Exception z)
+                {
+                    Console.WriteLine($"Algo salio mal: {z.Message}");
+                }
+
+            }
+
         }
 
 

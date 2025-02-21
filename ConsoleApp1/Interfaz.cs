@@ -21,7 +21,7 @@ namespace ConsoleApp1
                 "1.Agregar estudiante.\n" +
                 "2.Buscar estudiante.\n" +
                 "3.Eliminar estudiante.\n" +
-                "4.Mostrar todos los estudiantes/\n" +
+                "4.Mostrar todos los estudiantes\n" +
                 "5.Guardar lista de estudiantes.\n" +
                 "6.Cargar lista de estudiantes.\n" +
                 "[Salir]");
@@ -54,7 +54,7 @@ namespace ConsoleApp1
             else
             {
                 Console.WriteLine("El estudiante ya esta registrado");
-            };
+            }
 
         }
 
@@ -107,6 +107,29 @@ namespace ConsoleApp1
                         break;
                 }
             }
+        }
+
+        public static void MostrarEstudiantes(GrupoEstudiantes<Estudiante> grupo)
+        {
+            Console.Clear();
+            if (grupo.ListaEstudiantes.Any())
+            {
+                grupo.ListaEstudiantes.ForEach(x => x.MostrarInformacion());
+            }
+            else
+            {
+                Console.WriteLine("No existen estudiantes registrados");
+            }
+        }
+
+        public static void Cargar(GrupoEstudiantes<Estudiante> grupo)
+        {
+            grupo.CargarArchivoJson();
+        }
+
+        public static void Guardar(GrupoEstudiantes<Estudiante> grupo)
+        {
+            grupo.GuardarArchivoJson();
         }
 
        //fin 
