@@ -67,7 +67,7 @@ namespace ConsoleApp1
         public static double ValidarDouble(string numero, double largo)
         {
             //Este metodo funciona igual que ValidarInt solo que con un double en vez de un int.
-            if (string.IsNullOrEmpty(numero) || double.Parse(numero) > largo || double.TryParse(numero, out double c))
+            if (string.IsNullOrEmpty(numero) || double.Parse(numero) > largo || !double.TryParse(numero, out double c))
             {
                 throw new ArgumentException("El numero ingresado es invalido o nulo");
             }

@@ -55,7 +55,6 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("El estudiante ya esta registrado");
             }
-            Validaciones.Esperar();
         }
 
         public static void MenuBuscarEstudiante(GrupoEstudiantes<Estudiante> grupo)

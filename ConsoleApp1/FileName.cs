@@ -58,7 +58,6 @@ namespace ConsoleApp1
                             break;
                     }
 
-                    Validaciones.Esperar();
                     if (seleccion == 7)
                     {
                         break;
@@ -77,6 +76,8 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine($"Algo salio mal: {z.Message}");
                 }
+
+                Validaciones.Esperar();
 
             }
 
