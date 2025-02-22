@@ -52,7 +52,14 @@ namespace ConsoleApp1
         //el estudiante es registrado.
         private string GenerarMatricula(string nombre, int edad, string apellido)
         {
-            return "EST-" + nombre.Substring(0,1) + edad.ToString().Substring(1) + DateTime.Now.Day + DateTime.Now.Year.ToString().Substring(0,2) + apellido.Substring(0,1);
+            string[] Nom = nombre.Split(' ');
+            string[] Ape = apellido.Split(' ');
+
+            string inicialNombre = (Nom.Length > 1) ? string.Concat(Nom.Take(2).Select(x => x.Substring(0, 1).ToUpper())) : nombre.Substring(0, Math.Min(2, nombre.Length)).ToUpper();
+            string inicialApellido = (Ape.Length > 1) ? string.Concat(Ape.Take(2).Select(x => x.Substring(0, 1).ToUpper())) : apellido.Substring(0, Math.Min(2, apellido.Length)).ToUpper();
+
+            return "EST-" + inicialNombre + edad.ToString().Substring(0, 1) + DateTime.Now.Day.ToString() + inicialApellido;
+            //return "EST-" + nombre.Substring(0,1) + edad.ToString().Substring(1) + DateTime.Now.Day + DateTime.Now.Year.ToString().Substring(0,2) + apellido.Substring(0,1);
         }
 
     }
